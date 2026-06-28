@@ -1,5 +1,19 @@
 # Floss Collection
 
+## 🤖 AI Transparency
+
+This project ai-assisted development.
+
+- **AI Model**: Anthropic Claude Opus 4.5
+- **License**: GPL-3.0
+- **Human Contributor**: miskopo
+
+We believe in transparency about AI usage in software development.
+
+
+![AI-Generated License Badge](vibe-coded-badge.svg)
+
+
 A simple embroidery floss inventory manager with a Node.js API, SQLite database, and PatternFly React UI.
 
 ## Features
