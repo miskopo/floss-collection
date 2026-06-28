@@ -1,0 +1,29 @@
+[Unit]
+Description=Embroidery Floss Collection Manager
+Documentation=file:///opt/floss-collection/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=floss-collection
+Group=floss-collection
+WorkingDirectory=/opt/floss-collection
+EnvironmentFile=-/etc/floss-collection/env
+ExecStart=/usr/bin/node server/index.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/floss-collection/data
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+[Install]
+WantedBy=multi-user.target
